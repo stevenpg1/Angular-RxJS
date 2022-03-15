@@ -18,7 +18,7 @@ export class ProductListAltComponent  {
   products: Product[] = [];
   sub!: Subscription;
 
-  products$ = this.productService.products$
+  products$ = this.productService.productWithCategories$
   .pipe(
     catchError(err => {
       this.errorMessage = err;
